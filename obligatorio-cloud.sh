@@ -2,4 +2,4 @@
 
 sudo yum install mysql -y && yum install git -y
 sudo git clone https://github.com/augustonta/dump-rds.git
-mysql -u admin -p -h $1 ecome
+mysql -u admin -p -h $1 ecome < dump-rds/dump.sql
