@@ -17,10 +17,10 @@ resource "aws_db_instance" "mysqlecomme" {
   name                 = "ecome"
   username             = "admin"
   password             = "adminadmin"
- # maintenance_window   = "Fri:03:00-Fri:03:30"
   backup_window        = "05:00-06:00"
   backup_retention_period = 7
   skip_final_snapshot  = true
+  multi_az = true
   db_subnet_group_name = aws_db_subnet_group.subnet_db.id
   vpc_security_group_ids = [aws_security_group.rds_sg.id]
 
